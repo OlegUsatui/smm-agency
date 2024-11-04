@@ -1,16 +1,42 @@
 .header {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 1rem;
-    backdrop-filter: blur(10px); /* Blurred background for a frosted glass effect */
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    --menu-item-color: var(--color-primary);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+    top: 0;
+    width: 100%;
+
+    position: relative;
+    height: 52px;
+    padding: 0 20px;
+    border-radius: 16px;
+    transition: all .2s;
+
+    background-color: rgba(255, 255, 255, .1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.menu-wrapped {
+    background-color: var(--color-bg-menu);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .logo {
