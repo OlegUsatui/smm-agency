@@ -1,0 +1,36 @@
+.header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 1rem;
+    backdrop-filter: blur(10px); /* Blurred background for a frosted glass effect */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navList {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navItem {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navItem:hover {
+    color: #00bcd4; /* Light blue on hover */
+}
+
+
