@@ -1,0 +1,44 @@
+.heroSection {
+    background-color: #0a0a23; /* Dark background color */
+    color: #ffffff; /* White text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+.heroButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.heroButton:hover {
+    background: #ffffff;
+    color: #0a0a23;
+}
