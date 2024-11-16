@@ -1,5 +1,5 @@
 .heroSection {
-    color: #ffffff;
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     opacity: 0;
     transform: translateY(20px);
-    filter: blur(10px); /* Начальное размытие */
+    filter: blur(10px);
     animation: fadeInBlur 1s ease-out forwards;
 }
 
@@ -47,24 +47,23 @@
     color: rgba(255, 255, 255, 0.5);
     opacity: 0;
     transform: translateY(20px);
-    filter: blur(10px); /* Начальное размытие */
-    animation: fadeInBlur 0.5s ease-out 0.5s forwards; /* Задержка в 1.2 секунды */
+    filter: blur(10px);
+    animation: fadeInBlur 0.5s ease-out 0.5s forwards;
 }
 
 .heroButton {
     width: 300px;
 }
 
-/* Анимация с размытием */
 @keyframes fadeInBlur {
     0% {
         opacity: 0;
         transform: translateY(20px);
-        filter: blur(10px); /* Максимальное размытие */
+        filter: blur(10px);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
-        filter: blur(0); /* Убираем размытие */
+        filter: blur(0);
     }
 }

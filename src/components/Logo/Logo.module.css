@@ -1,5 +1,5 @@
 .logo {
-    color: #FFFFFF;
+    color: var(--color-primary);
     font-size: 24px;
     font-family: Work Sans;
     font-style: italic;

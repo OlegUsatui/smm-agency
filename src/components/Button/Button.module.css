@@ -1,10 +1,10 @@
 .button {
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.9));
+    background: var(--color-secondary);
     font-size: 14px;
     padding: 15px 30px;
-    color: #ffffff;
+    color: var(--color-primary);
     border-radius: 10px;
     overflow: hidden; /* Скрываем содержимое за границей кнопки */
     z-index: 1;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-    background: linear-gradient(135deg, rgba(128, 0, 255, 0.9), rgba(0, 0, 0, 0.5));
+    background: var(--color-secondary);
 }
 
 .button::before {

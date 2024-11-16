@@ -2,7 +2,7 @@
     font-size: 55px;
     font-weight: 600;
     line-height: 55px;
-    color: #FFFFFF;
+    color: var(--color-primary);
     text-align: center;
     display: inline-block;
 }
@@ -10,5 +10,5 @@
 .highlighted {
     font-family: "Instrument Serif", serif;
     font-style: italic;
-    color: #FFFFFF;
+    color: var(--color-primary);
 }
