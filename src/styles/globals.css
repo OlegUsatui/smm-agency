@@ -75,9 +75,9 @@ ul {
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi/Satoshi-Light.woff2') format('woff2'),
-  url('/fonts/Satoshi/Satoshi-Light.woff') format('woff'),
-  url('/fonts/Satoshi/Satoshi-Light.ttf') format('truetype');
+  src: url('/fonts/Satoshi/Satoshi-LightItalic.woff2') format('woff2'),
+  url('/fonts/Satoshi/Satoshi-LightItalic.woff') format('woff'),
+  url('/fonts/Satoshi/Satoshi-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Header.module.css';
+import Button from "@/components/Button/Button";
+import Logo from "@/components/Logo/Logo";
 
 const Header = () => {
     useEffect(() => {
@@ -25,9 +27,7 @@ const Header = () => {
             <div className={styles.container}>
                 <div className={styles.innerContainer}>
                     <div className={styles.menuWrapper}>
-                        <a href="#" className={styles.logo}>
-                            OLENA MOSHKO
-                        </a>
+                        <Logo />
                         <button
                             className={`${styles.hamburger} hamburger--collapse js-open-menu`}
                             type="button"
@@ -64,6 +64,7 @@ const Header = () => {
                                     <a href="#contact" className={styles.menuLink}>Contact</a>
                                 </li>
                             </ul>
+                            <Button text={'Click'}></Button>
                         </div>
                     </div>
                 </div>

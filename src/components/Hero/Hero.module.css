@@ -1,5 +1,5 @@
 .heroSection {
-    color: #ffffff; /* White text color */
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,36 +8,55 @@
 }
 
 .heroContent {
-    max-width: 800px;
+    max-width: 620px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px); /* Начальное размытие */
+    animation: fadeInBlur 1s ease-out forwards;
+}
+
+.heroName {
+    max-width: 620px;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.heroContentSpan {
+    font-family: "Instrument Serif";
+    font-style: italic;
+    font-weight: 300;
 }
 
 .heroTitle {
-    font-size: 3rem;
+    font-size: 63px;
+    letter-spacing: -0.04px;
     font-weight: 300;
     margin-bottom: 1rem;
-    font-family: 'Tenor Sans', sans-serif;
+    line-height: 67px;
 }
 
 .heroSubtitle {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 2rem;
-    font-family: 'Open Sans Hebrew', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px); /* Начальное размытие */
+    animation: fadeInBlur 0.5s ease-out 0.5s forwards; /* Задержка в 1.2 секунды */
 }
 
-.heroButton {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    background: transparent;
-    border: 1px solid #ffffff;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.heroButton:hover {
-    background: #ffffff;
-    color: #0a0a23;
+/* Анимация с размытием */
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px); /* Максимальное размытие */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0); /* Убираем размытие */
+    }
 }
