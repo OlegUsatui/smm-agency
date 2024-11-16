@@ -1,1 +1,63 @@
 
+.faqSection {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+
+}
+
+.faqHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.faqList {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faqItem {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faqItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faqItem.active {
+    background: linear-gradient(135deg, rgba(128, 0, 255, 0.1), rgba(0, 0, 0, 0.9));
+}
+
+/* Вопрос: текст */
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Переключатель "+" / "-" */
+.faqToggle {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Ответ */
+.faqAnswer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}

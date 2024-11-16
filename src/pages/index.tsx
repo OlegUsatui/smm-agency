@@ -4,6 +4,7 @@ import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Plans from "@/components/Plans/Plans";
 import BrandCarousel from "@/components/Brands/BrandCarousel";
+import FAQ from "@/components/FAQ/FAQ";
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
                 <BrandCarousel />
                 <About/>
                 <Plans />
+                <FAQ />
             </main>
             <footer>
 
