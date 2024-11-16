@@ -1,0 +1,13 @@
+.sectionTitle {
+    font-size: 55px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+}
+
+.highlighted {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    color: #FFFFFF;
+}
