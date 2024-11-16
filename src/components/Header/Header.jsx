@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styles from './Header.module.css';
-import Button from "@/components/Button/Button";
 import Logo from "@/components/Logo/Logo";
 
 const Header = () => {

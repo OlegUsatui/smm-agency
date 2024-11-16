@@ -7,7 +7,7 @@ const Plans = () => {
         {
             id: 1,
             title: "One-Time Content Shoot",
-            price: "3,000 NOK",
+            price: "3 000 NOK",
             period: "/one-time",
             description:
                 "Perfect for quick creation of high-quality content to refresh your profile or boost a marketing campaign.",
@@ -20,7 +20,7 @@ const Plans = () => {
         {
             id: 2,
             title: "Monthly Content",
-            price: "8,000 NOK",
+            price: "8 000 NOK",
             period: "/month",
             description:
                 "A package tailored for brands needing regular content creation for their social media channels.",
@@ -33,8 +33,8 @@ const Plans = () => {
         },
         {
             id: 3,
-            title: "SMM Management Package",
-            price: "10,000 NOK",
+            title: "SMM Management",
+            price: "10 000 NOK",
             period: "/month",
             description:
                 "Perfect for clients who already have their own content but need professional management of their social media platforms.",
@@ -50,7 +50,7 @@ const Plans = () => {
         {
             id: 4,
             title: "SMM + Content Creation",
-            price: "15,000 NOK",
+            price: "15 000 NOK",
             period: "/month",
             description:
                 "A combined package that includes content creation and professional social media management.",
@@ -68,7 +68,7 @@ const Plans = () => {
         {
             id: 5,
             title: "Content Management Only",
-            price: "5,000 NOK",
+            price: "5 000 NOK",
             period: "/month",
             description:
                 "For clients who create their own content but need help organizing and analyzing it professionally.",

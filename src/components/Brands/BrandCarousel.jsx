@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BrandCarousel.module.css';
+import Image from 'next/image'
 
 const BrandCarousel = () => {
     const brands = [
@@ -15,7 +16,7 @@ const BrandCarousel = () => {
             <div className={styles.logos}>
                 <div className={styles.logosSlide}>
                     {brands.map((brand, index) => (
-                        <img
+                        <Image
                             key={index}
                             src={brand}
                             alt={`Brand ${index + 1}`}
@@ -25,7 +26,7 @@ const BrandCarousel = () => {
                 </div>
                 <div className={styles.logosSlide}>
                     {brands.map((brand, index) => (
-                        <img
+                        <Image
                             key={index}
                             src={brand}
                             alt={`Brand ${index + 1}`}
