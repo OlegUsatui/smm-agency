@@ -1,3 +1,16 @@
 .about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    gap: 55px;
+}
 
+.title {
+    max-width: 600px;
+}
+
+.description {
+    max-width: 600px;
 }
