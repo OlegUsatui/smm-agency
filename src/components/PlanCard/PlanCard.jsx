@@ -1,37 +1,28 @@
 import React from 'react';
 import styles from './PlanCard.module.css';
 
-const PlanCard = () => {
+const PlanCard = ({plan}) => {
     return (
         <div className={styles.planCard}>
-            <div className={styles.planCardTitle}>One-Time Content Shoot</div>
+            <div className={styles.planCardTitle}>{plan.title}</div>
             <div className={styles.planCardPrice}>
-                <span className={styles.planCardPriceValue}>$300</span>
-                <span className={styles.planCardPriceTerm}>/one-time</span>
+                <span className={styles.planCardPriceValue}>{plan.price}</span>
+                <span className={styles.planCardPriceTerm}>{plan.period}</span>
             </div>
             <div className={styles.planCardDescription}>
-                For businesses needing a quick content boost
+                {plan.description}
             </div>
             <div className={styles.planCardNote}>
-                Billed in one annual payment.
+                {plan.note}
             </div>
             <div className={styles.planCardFeaturesTitle}>Including:</div>
             <ul className={styles.planCardFeatures}>
-                <li className={styles.planCardFeature}>
-                    <span className={styles.checkIcon}>✔</span> Unlimited Task Creation
-                </li>
-                <li className={styles.planCardFeature}>
-                    <span className={styles.checkIcon}>✔</span> Cross-Device Sync
-                </li>
-                <li className={styles.planCardFeature}>
-                    <span className={styles.checkIcon}>✔</span> Drag-and-Drop Organization
-                </li>
-                <li className={styles.planCardFeature}>
-                    <span className={styles.checkIcon}>✔</span> Basic Priority Settings
-                </li>
-                <li className={styles.planCardFeature}>
-                    <span className={styles.checkIcon}>✔</span> Email Support
-                </li>
+                {plan.features.map(feature => (
+                    <li key={feature.name} className={styles.planCardFeature}>
+                        <span className={styles.checkIcon}>✔</span> {feature.name}
+                    </li>
+                ))}
+
             </ul>
         </div>
     );

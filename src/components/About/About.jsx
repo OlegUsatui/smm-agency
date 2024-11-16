@@ -6,7 +6,7 @@ import SectionTitleStyles from '../SectionTitle/SectionTitle.module.css';
 
 const About = () => {
     return (
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
             <SectionBadge text="About" />
             <div className={styles.title}>
                 <SectionTitle>Growing your <span className={SectionTitleStyles.highlighted}>brand</span> together.</SectionTitle>

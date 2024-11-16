@@ -58,13 +58,13 @@ const Header = () => {
                                     <a href="#about" className={styles.menuLink}>About</a>
                                 </li>
                                 <li className={styles.menuItem}>
-                                    <a href="#services" className={styles.menuLink}>Services</a>
+                                    <a href="#plans" className={styles.menuLink}>Services</a>
                                 </li>
                                 <li className={styles.menuItem}>
                                     <a href="#contact" className={styles.menuLink}>Contact</a>
                                 </li>
                             </ul>
-                            <Button text={'Click'}></Button>
+                            <Button text={"LET'S TALK"}></Button>
                         </div>
                     </div>
                 </div>
