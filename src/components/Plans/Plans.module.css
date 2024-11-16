@@ -32,3 +32,45 @@
 .cardsItem {
     height: 100%;
 }
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: 80%;
+}
+
+.sliderContent {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.cardWrapper {
+    /*min-width: 300px;*/
+    /*flex-shrink: 0;*/
+    transition: transform 0.3s ease;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.arrow:active {
+    transform: scale(0.9);
+}

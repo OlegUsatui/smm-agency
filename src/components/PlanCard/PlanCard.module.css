@@ -3,11 +3,12 @@
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, .1);
     color: var(--color-primary);
-    padding: 48px 32px;
+    padding: 48px 32px 94px;
     width: 450px;
     height: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    position: relative;
 }
 
 .planCardTitle {
@@ -70,9 +71,8 @@
 }
 
 .planCardButton {
-    font-size: 1rem;
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
+    position: absolute;
+    bottom: 48px;
+    left: 32px;
+    width: calc(100% - 64px);
 }

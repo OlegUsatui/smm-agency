@@ -21,7 +21,9 @@ const PlanCard = ({plan}) => {
                     </li>
                 ))}
             </ul>
-            <Button text={"Purchase"}></Button>
+            <div className={styles.planCardButton}>
+                <Button text={"Purchase"}></Button>
+            </div>
         </div>
     );
 };
