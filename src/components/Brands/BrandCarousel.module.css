@@ -1,0 +1,59 @@
+.brandCarousel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 55px;
+}
+.logos {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    max-width: 800px;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+}
+
+.logos:hover .logosSlide {
+    animation-play-state: paused;
+}
+.logosSlide {
+    display: inline-block;
+    animation: 35s slide infinite linear ;
+}
+
+
+.brandLogo {
+    height: 50px;
+    margin: 0 40px;
+}
+
+/* Анимация движения */
+@keyframes slide {
+    from {
+        transform: translateX(0); /* Начальная позиция */
+    }
+    to {
+        transform: translateX(-100%); /* Сдвиг на всю ширину */
+    }
+}

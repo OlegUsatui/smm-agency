@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Plans from "@/components/Plans/Plans";
+import BrandCarousel from "@/components/Brands/BrandCarousel";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
             <Header/>
             <main>
                 <Hero/>
+                <BrandCarousel />
                 <About/>
                 <Plans />
             </main>

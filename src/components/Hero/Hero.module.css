@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     text-align: center;
+    padding: 100px 0;
 }
 
 .heroContent {
