@@ -64,7 +64,6 @@ const Header = () => {
                                     <a href="#contact" className={styles.menuLink}>Contact</a>
                                 </li>
                             </ul>
-                            <Button text={"LET'S TALK"}></Button>
                         </div>
                     </div>
                 </div>

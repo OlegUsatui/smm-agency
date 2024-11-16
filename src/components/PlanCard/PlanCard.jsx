@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './PlanCard.module.css';
+import Button from "@/components/Button/Button";
 
 const PlanCard = ({plan}) => {
     return (
@@ -12,9 +13,6 @@ const PlanCard = ({plan}) => {
             <div className={styles.planCardDescription}>
                 {plan.description}
             </div>
-            <div className={styles.planCardNote}>
-                {plan.note}
-            </div>
             <div className={styles.planCardFeaturesTitle}>Including:</div>
             <ul className={styles.planCardFeatures}>
                 {plan.features.map(feature => (
@@ -22,8 +20,8 @@ const PlanCard = ({plan}) => {
                         <span className={styles.checkIcon}>✔</span> {feature.name}
                     </li>
                 ))}
-
             </ul>
+            <Button text={"Purchase"}></Button>
         </div>
     );
 };

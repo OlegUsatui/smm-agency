@@ -42,12 +42,6 @@
     margin-bottom: 8px;
 }
 
-.planCardNote {
-    font-size: 0.875rem;
-    color: #888;
-    margin-bottom: 24px;
-}
-
 .planCardFeaturesTitle {
     font-size: 1.1rem;
     font-weight: 600;
@@ -58,7 +52,7 @@
 .planCardFeatures {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 40px;
     text-align: left;
 }
 
@@ -74,4 +68,12 @@
     margin-right: 8px;
     color: #4caf50;
     font-weight: bold;
+}
+
+.planCardButton {
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
 }

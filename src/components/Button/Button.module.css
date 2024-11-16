@@ -1,7 +1,43 @@
 .button {
-    background: #512FEB;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.9));
     font-size: 14px;
-    padding: 10px 30px;
-    color: #FFFFFF;
+    padding: 15px 30px;
+    color: #ffffff;
     border-radius: 10px;
+    overflow: hidden; /* Скрываем содержимое за границей кнопки */
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, rgba(128, 0, 255, 0.9), rgba(0, 0, 0, 0.5));
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция полосы загрузки */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    transform: skewX(-45deg); /* Наклон полосы */
+    transition: none;
+}
+
+.button:hover::before {
+    left: 100%; /* Движение полосы к правому краю */
+    animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
 }

@@ -10,7 +10,6 @@ const Plans = () => {
             price: "$300",
             period: "/one-time",
             description: "For businesses needing a quick content boost",
-            note: "Billed in one annual payment.",
             features: [
                 { name: "Unlimited Task Creation" },
                 { name: "Cross-Device Sync" },
@@ -26,7 +25,6 @@ const Plans = () => {
             period: "/month",
             description:
                 "All the essentials you need to stay on top of your tasks, with simplicity and ease.",
-            note: "Billed in one annual payment.",
             features: [
                 { name: "Unlimited Task Creation" },
                 { name: "Cross-Device Sync" },
@@ -42,7 +40,6 @@ const Plans = () => {
             period: "/month",
             description:
                 "Take your productivity to the next level with advanced tools and personalized support.",
-            note: "Billed in one annual payment.",
             features: [
                 { name: "Custom Task Categories" },
                 { name: "Advanced Priority Settings" },

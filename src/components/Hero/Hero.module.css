@@ -8,6 +8,10 @@
 }
 
 .heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 620px;
     margin: 0 auto;
     opacity: 0;
@@ -45,6 +49,10 @@
     transform: translateY(20px);
     filter: blur(10px); /* Начальное размытие */
     animation: fadeInBlur 0.5s ease-out 0.5s forwards; /* Задержка в 1.2 секунды */
+}
+
+.heroButton {
+    width: 300px;
 }
 
 /* Анимация с размытием */
