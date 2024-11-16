@@ -1,0 +1,30 @@
+.plans {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    gap: 55px;
+}
+
+.plans::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(128, 0, 255, 1), rgba(0, 0, 0, 0)); /* Фиолетовый градиент */
+    filter: blur(120px); /* Размытие */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.cardsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

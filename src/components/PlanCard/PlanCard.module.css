@@ -1,0 +1,77 @@
+.planCard {
+    background: rgba(255, 255, 255, .04);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    color: #fff;
+    padding: 48px 32px;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.planCardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.planCardPrice {
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.planCardPriceValue {
+    color: #fff;
+}
+
+.planCardPriceTerm {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.planCardDescription {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.planCardNote {
+    font-size: 0.875rem;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.planCardFeaturesTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.planCardFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.planCardFeature {
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkIcon {
+    margin-right: 8px;
+    color: #4caf50;
+    font-weight: bold;
+}
