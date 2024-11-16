@@ -85,9 +85,15 @@ const Plans = () => {
     return (
         <section className={styles.plans} id="plans">
             <ul className={styles.cardsList}>
-                <li className={styles.cardsItem}><PlanCard plan={plans[0]}></PlanCard></li>
-                <li className={styles.cardsItem}><PlanCard plan={plans[1]}></PlanCard></li>
-                <li className={styles.cardsItem}><PlanCard plan={plans[2]}></PlanCard></li>
+                <li className={styles.cardsItem}>
+                    <PlanCard plan={plans[0]}/>
+                </li>
+                <li className={styles.cardsItem}>
+                    <PlanCard plan={plans[1]}/>
+                </li>
+                <li className={styles.cardsItem}>
+                    <PlanCard plan={plans[2]}/>
+                </li>
             </ul>
         </section>
 

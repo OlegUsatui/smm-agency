@@ -19,6 +19,8 @@ const BrandCarousel = () => {
                         <Image
                             key={index}
                             src={brand}
+                            width={100}
+                            height={50}
                             alt={`Brand ${index + 1}`}
                             className={styles.brandLogo}
                         />
@@ -29,6 +31,8 @@ const BrandCarousel = () => {
                         <Image
                             key={index}
                             src={brand}
+                            width={100}
+                            height={50}
                             alt={`Brand ${index + 1}`}
                             className={styles.brandLogo}
                         />
