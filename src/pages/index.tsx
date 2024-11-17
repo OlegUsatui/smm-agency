@@ -9,11 +9,23 @@ import Services from "@/components/Services/Services";
 import Contacts from "@/components/Contacts/Contacts";
 import {useState} from "react";
 
+interface Plan {
+    description: string;
+    features: Feature[];
+    id: number;
+    period: string;
+    price: string;
+    title: string;
+}
+
+interface Feature {
+    name: string;
+}
 
 function Home() {
-    const [selectedPlan, setSelectedPlan] = useState(null); // Состояние для выбранного плана
+    const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null); // Состояние для выбранного плана
 
-    const handlePlanClick = (plan) => {
+    const handlePlanClick = (plan: Plan) => {
         setSelectedPlan(plan);
         console.log("Selected Plan:", plan);
     };

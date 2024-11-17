@@ -3,7 +3,8 @@ import emailjs from "emailjs-com";
 import styles from "./ContactForm.module.css";
 import Button from "@/components/Button/Button";
 
-const ContactForm = ({ plan }) => {
+// Вспомогательный хук для управления состоянием формы
+const useContactForm = (plan) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,8 +13,8 @@ const ContactForm = ({ plan }) => {
     });
 
     const [isSent, setIsSent] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
-    // Обновляем сообщение при изменении плана
     useEffect(() => {
         if (plan) {
             setFormData((prevData) => ({
@@ -25,15 +26,10 @@ const ContactForm = ({ plan }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+    const handleSubmit = async () => {
         try {
             await emailjs.send(
                 "service_xjle318", // Замените на ID вашего EmailJS сервиса
@@ -41,7 +37,6 @@ const ContactForm = ({ plan }) => {
                 formData,
                 "M0dKTMHYm72ukRtrr" // Замените на ваш Public Key (User ID)
             );
-
             setIsSent(true);
             setFormData({
                 name: "",
@@ -50,70 +45,100 @@ const ContactForm = ({ plan }) => {
                 message: "",
             });
         } catch (error) {
+            setErrorMessage("Failed to send the message. Please try again later.");
             console.error("Error sending email:", error);
         }
     };
 
+    return { formData, isSent, errorMessage, handleChange, handleSubmit };
+};
+
+const ContactForm = ({ plan }) => {
+    const { formData, isSent, errorMessage, handleChange, handleSubmit } = useContactForm(plan);
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        handleSubmit();
+    };
+
     return (
         <section className={styles.contactSection}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleFormSubmit}>
                 <div className={styles.inputGroup}>
-                    <div className={styles.inputWrapper}>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Jane Smith"
-                            className={styles.input}
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className={styles.inputWrapper}>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="jane@framer.com"
-                            className={styles.input}
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                </div>
-                <div className={styles.inputWrapper}>
-                    <label htmlFor="phone">Phone (Telegram name)</label>
-                    <input
+                    <InputField
+                        label="Name"
                         type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="@telegramusername"
-                        className={styles.input}
-                        value={formData.phone}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className={styles.textAreaWrapper}>
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Your message..."
-                        className={styles.textArea}
-                        value={formData.message}
+                        name="name"
+                        placeholder="Jane Smith"
+                        value={formData.name}
                         onChange={handleChange}
                         required
-                    ></textarea>
+                    />
+                    <InputField
+                        label="Email"
+                        type="email"
+                        name="email"
+                        placeholder="jane@framer.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-                <Button text={"Submit"} type="submit" className={styles.submitButton}></Button>
+                <InputField
+                    label="Phone (Telegram name)"
+                    type="text"
+                    name="phone"
+                    placeholder="@telegramusername"
+                    value={formData.phone}
+                    onChange={handleChange}
+                />
+                <TextAreaField
+                    label="Message"
+                    name="message"
+                    placeholder="Your message..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                />
+                <Button text="Submit" type="submit" className={styles.submitButton} />
                 {isSent && <p className={styles.successMessage}>Message sent successfully!</p>}
+                {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
             </form>
         </section>
     );
 };
+
+// Компонент для текстовых полей
+const InputField = ({ label, type, name, placeholder, value, onChange, required = false }) => (
+    <div className={styles.inputWrapper}>
+        <label htmlFor={name}>{label}</label>
+        <input
+            id={name}
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            value={value}
+            onChange={onChange}
+            className={styles.input}
+            required={required}
+        />
+    </div>
+);
+
+// Компонент для текстовой области
+const TextAreaField = ({ label, name, placeholder, value, onChange, required = false }) => (
+    <div className={styles.textAreaWrapper}>
+        <label htmlFor={name}>{label}</label>
+        <textarea
+            id={name}
+            name={name}
+            placeholder={placeholder}
+            value={value}
+            onChange={onChange}
+            className={styles.textArea}
+            required={required}
+        ></textarea>
+    </div>
+);
 
 export default ContactForm;
