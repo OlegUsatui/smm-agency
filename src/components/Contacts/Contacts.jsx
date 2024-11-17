@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../About/About.module.css";
+import styles from "./Contacts.module.css";
 import containerStyles from "../../styles/Container.module.css";
 import SectionBadge from "../SectionBadge/SectionBadge";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -8,7 +8,7 @@ import ContactForm from "@/components/ContactForm/ContactForm";
 
 const Contacts = ({plan}) => {
     return (
-        <section className={styles.about} id="contacts">
+        <section className={styles.contacts} id="contacts">
             <div className={containerStyles.container}>
                 <div className={styles.innerContainer}>
                     <SectionBadge text="Contacts"/>

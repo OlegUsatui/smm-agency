@@ -21,4 +21,5 @@
 .description {
     max-width: 48.5rem;
     text-align: justify;
+    opacity: 1;
 }

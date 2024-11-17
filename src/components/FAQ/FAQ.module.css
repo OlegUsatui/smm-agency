@@ -1,9 +1,24 @@
 .faqSection {
+    position: relative;
     color: var(--color-primary);
     padding: 2.5rem 0;
     text-align: center;
-
 }
+
+.faqSection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(128, 0, 255, 1), rgba(0, 0, 0, 0));
+    filter: blur(120px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
 
 .faqHeader {
     display: flex;
@@ -22,19 +37,6 @@
     width: 100%;
 }
 
-.faqList::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(180deg, rgba(128, 0, 255, 1), rgba(0, 0, 0, 0));
-    filter: blur(120px);
-    border-radius: 50%;
-    z-index: 0;
-}
 
 .faqItem {
     width: 100%;

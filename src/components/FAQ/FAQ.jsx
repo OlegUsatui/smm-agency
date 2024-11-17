@@ -61,31 +61,30 @@ const FAQ = () => {
                 <div className={styles.faqHeader}>
                     <SectionBadge text="FAQ"/>
                     <SectionTitle>
-                        Everything you <span className={SectionTitleStyles.highlighted}>need</span> to know.
+                        Everything you<span className={SectionTitleStyles.highlighted}>need</span> to know.
                     </SectionTitle>
                     <p>
                         Got questions? We’ve got answers. Here’s everything you need to know before getting started.
                     </p>
                 </div>
-                <div className={styles.faqList}>
+                <ul className={styles.faqList}>
                     {questions.map((item, index) => (
-                        <div
+                        <li
                             key={index}
                             className={styles.faqItem}
-                            onClick={() => toggleQuestion(index)}
-                        >
+                            onClick={() => toggleQuestion(index)}>
                             <div className={styles.faqQuestion}>
                                 {item.question}
                                 <span className={styles.faqToggle}>
-                {activeIndex === index ? '-' : '+'}
-              </span>
+                                    {activeIndex === index ? '-' : '+'}
+                                </span>
                             </div>
                             {activeIndex === index && (
                                 <div className={styles.faqAnswer}>{item.answer}</div>
                             )}
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
 );
