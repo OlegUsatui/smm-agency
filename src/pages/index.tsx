@@ -6,6 +6,7 @@ import Plans from "@/components/Plans/Plans";
 import BrandCarousel from "@/components/Brands/BrandCarousel";
 import FAQ from "@/components/FAQ/FAQ";
 import Services from "@/components/Services/Services";
+import Contacts from "@/components/Contacts/Contacts";
 
 
 function Home() {
@@ -19,11 +20,12 @@ function Home() {
             <Header/>
             <main>
                 <Hero/>
-                <BrandCarousel />
-                <Services />
+                <BrandCarousel/>
+                <Services/>
                 <About/>
-                <Plans />
-                <FAQ />
+                <Plans/>
+                <FAQ/>
+                <Contacts/>
             </main>
             <footer>
 
@@ -31,4 +33,5 @@ function Home() {
         </>
     );
 }
+
 export default Home;
