@@ -26,7 +26,7 @@ const ContactForm = () => {
 
         try {
             await emailjs.send(
-                "service_5u5w38z", // Замените на ID вашего EmailJS сервиса
+                "service_xjle318", // Замените на ID вашего EmailJS сервиса
                 "template_qk3cwej", // Замените на ID вашего EmailJS шаблона
                 formData,
                 "M0dKTMHYm72ukRtrr" // Замените на ваш Public Key (User ID)
