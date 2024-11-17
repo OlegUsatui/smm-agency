@@ -50,21 +50,14 @@
 .faqItem:hover {
     background: rgba(255, 255, 255, 0.05);
 }
-
-/*.faqItem.active {*/
-/*    background: linear-gradient(135deg, rgba(128, 0, 255, 0.1), rgba(0, 0, 0, 0.9));*/
-/*}*/
-
-/* Вопрос: текст */
 .faqQuestion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-/* Переключатель "+" / "-" */
 .faqToggle {
     font-size: 1.5rem;
     font-weight: 600;
@@ -73,6 +66,6 @@
 /* Ответ */
 .faqAnswer {
     margin-top: 0.625rem;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
 }

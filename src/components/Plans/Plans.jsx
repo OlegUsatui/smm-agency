@@ -42,7 +42,7 @@ const Plans = () => {
             features: [
                 {name: "Instagram posts (2 posts/week)"},
                 {name: "Stories (up to 3 per day)"},
-                {name: "Reels (1 per week)"},
+                {name: "Reels (2 per week)"},
                 {name: "Engagement with comments and messages"},
                 {name: "Targeted advertising setup and optimization"},
                 {name: "Analytics monitoring and reporting"},
@@ -87,15 +87,11 @@ const Plans = () => {
         <section className={styles.plans} id="plans">
             <div className={containerStyles.container}>
                 <ul className={styles.cardsList}>
-                    <li className={styles.cardsItem}>
-                        <PlanCard plan={plans[0]}/>
-                    </li>
-                    <li className={styles.cardsItem}>
-                        <PlanCard plan={plans[1]}/>
-                    </li>
-                    <li className={styles.cardsItem}>
-                        <PlanCard plan={plans[2]}/>
-                    </li>
+                    {plans.map((plan) => (
+                        <li key={plan.id} className={styles.cardsItem}>
+                            <PlanCard plan={plan}/>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>

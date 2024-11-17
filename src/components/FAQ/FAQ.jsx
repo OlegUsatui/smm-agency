@@ -47,7 +47,7 @@ const FAQ = () => {
         <section className={styles.faqSection}>
             <div className={containerStyles.container}>
                 <div className={styles.faqHeader}>
-                    <SectionBadge text="Frequently Asked Questions"/>
+                    <SectionBadge text="FAQ"/>
                     <SectionTitle>
                         Everything you <span className={SectionTitleStyles.highlighted}>need</span> to know.
                     </SectionTitle>

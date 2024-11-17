@@ -13,7 +13,7 @@ const Hero = () => {
                     <p className={styles.heroSubtitle}>Creating content that inspires, motivates, and captures the
                         audience’s attention.</p>
                     <div className={styles.heroButton}>
-                        <Button text={"LET'S TALK"}></Button>
+                        <Button text={"LEARN MORE"}></Button>
                     </div>
                 </div>
             </div>

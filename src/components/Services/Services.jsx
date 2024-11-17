@@ -22,7 +22,7 @@ const Services = () => {
                     </li>
                     <li className={styles.serviceCard}>
                         <div className={styles.serviceNumber}>02</div>
-                        <h3 className={styles.serviceTitle}>Content cration</h3>
+                        <h3 className={styles.serviceTitle}>Content creation</h3>
                         <p className={styles.serviceDescription}>
                             Photo and video production, editing, and creating unique content for your brand. Development
                             of

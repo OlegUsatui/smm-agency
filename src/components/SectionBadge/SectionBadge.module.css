@@ -1,7 +1,6 @@
 .sectionBadge {
     display: inline-flex;
     align-items: center;
-    border: 1px solid #2A2A2A;
     color: var(--color-primary);
     font-size: 1.5rem;
     line-height: normal;

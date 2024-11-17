@@ -15,10 +15,6 @@
     gap: 2rem;
     max-width: 38.75rem;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateY(1.25rem);
-    filter: blur(0.625rem);
-    animation: fadeInBlur 1s ease-out forwards;
 }
 
 .heroName {
@@ -38,10 +34,15 @@
     font-weight: 300;
     font-size: 4rem;
     line-height: 4rem;
+
+    opacity: 0;
+    transform: translateY(1.25rem);
+    filter: blur(0.625rem);
+    animation: fadeInBlurVisible 1s ease-out forwards;
 }
 
 .heroSubtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     transform: translateY(1.25rem);
     filter: blur(0.625rem);
@@ -53,6 +54,18 @@
 }
 
 @keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        transform: translateY(1.25rem);
+        filter: blur(0.625rem);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+@keyframes fadeInBlurVisible {
     0% {
         opacity: 0;
         transform: translateY(1.25rem);

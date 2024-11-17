@@ -1,6 +1,4 @@
 .logo {
-    color: var(--color-primary);
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
 }

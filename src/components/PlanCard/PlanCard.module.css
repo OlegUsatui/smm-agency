@@ -5,9 +5,8 @@
     color: var(--color-primary);
     padding: 3rem 2rem 5.875rem;
     height: 100%;
-    max-width: 30rem;
+    max-width: 40rem;
     box-shadow: var(--bow-shadow-10);
-    margin: 0 auto;
     position: relative;
 }
 
@@ -81,7 +80,33 @@
 }
 
 @media (min-width: 1024px) {
+    .planCard {
+        max-width: 21rem;
+    }
+    .planCardTitle {
+        font-size: 1rem;
+    }
 
+    .planCardPriceValue {
+        font-size: 2rem;
+    }
+
+    .planCardPriceTerm {
+        font-size: 1rem;
+    }
+
+    .planCardDescription {
+        font-size: 1rem;
+    }
+
+    .planCardFeaturesTitle {
+        font-size: 1rem;
+    }
+
+
+    .planCardFeature {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 1440px) {
