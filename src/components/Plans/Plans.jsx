@@ -8,6 +8,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Navigation} from "swiper/modules";
+import SectionBadge from "@/components/SectionBadge/SectionBadge";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import SectionTitleStyles from "@/components/SectionTitle/SectionTitle.module.css";
 
 const Plans = () => {
     const plans = [
@@ -92,6 +95,21 @@ const Plans = () => {
     return (
         <section className={styles.plans} id="plans">
             <div className={containerStyles.container}>
+                <div className={styles.plansHeader}>
+                    <SectionBadge text="Pricing"/>
+                    <div className={styles.plansHeaderTitle}>
+                        <SectionTitle>
+                            Simple pricing, no
+                            <span className={SectionTitleStyles.highlighted}>
+                                surprises.
+                            </span>
+                        </SectionTitle>
+                    </div>
+                    <p className={styles.plansHeaderDescription}>Find the perfect package to elevate your social media presence
+                        today. Choose a plan that aligns with your business goals and start transforming your online
+                        engagement.
+                    </p>
+                </div>
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={3}
