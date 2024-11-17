@@ -139,12 +139,12 @@ const Plans = () => {
                     )
                     }
                 </ul>
-                <button className={`${styles.arrow} ${styles.arrowLeft}`}>
+                <button type="button" className={`${styles.arrow} ${styles.arrowLeft}`} aria-label="Prev button">
                     <svg width="82" height="82">
                         <use href="/img/icons.svg#icon-arrow-right"/>
                     </svg>
                 </button>
-                <button className={`${styles.arrow} ${styles.arrowRight}`}>
+                <button type="button" className={`${styles.arrow} ${styles.arrowRight}`} aria-label="Next button">
                     <svg width="82" height="82">
                         <use href="/img/icons.svg#icon-arrow-right"/>
                     </svg>
