@@ -34,7 +34,7 @@ const ContactForm = () => {
 
             setIsSent(true);
             setFormData({
-                name: "",
+                from_name: "",
                 email: "",
                 phone: "",
                 message: "",
