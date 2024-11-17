@@ -12,7 +12,7 @@ const Services = () => {
                 <ul className={styles.servicesList}>
                     <li className={styles.serviceCard}>
                         <div className={styles.serviceNumber}>01</div>
-                        <h3 className={styles.serviceTitle}>Smm management</h3>
+                        <h3 className={styles.serviceTitle}>SMM management</h3>
                         <p className={styles.serviceDescription}>
                             Strategic management of your social media platforms aimed at attracting new audiences and
                             building

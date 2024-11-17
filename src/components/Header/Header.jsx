@@ -92,7 +92,7 @@ const Header = () => {
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#contact" className={styles.menuLink} onClick={closeMenu}>
+                                        <a href="#contacts" className={styles.menuLink} onClick={closeMenu}>
                                             Contact
                                         </a>
                                     </li>

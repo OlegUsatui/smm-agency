@@ -19,7 +19,7 @@
     margin: 0 auto;
     text-align: left;
     overflow: hidden;
-    width: 70%;
+    width: 100%;
 }
 
 .faqList::before {
@@ -67,4 +67,9 @@
     margin-top: 0.625rem;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
+}
+@media (min-width: 1024px) {
+    .faqList {
+        width: 70%;
+    }
 }

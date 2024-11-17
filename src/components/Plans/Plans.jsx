@@ -105,17 +105,18 @@ const Plans = () => {
                             </span>
                         </SectionTitle>
                     </div>
-                    <p className={styles.plansHeaderDescription}>Find the perfect package to elevate your social media presence
+                    <p className={styles.plansHeaderDescription}>Find the perfect package to elevate your social media
+                        presence
                         today. Choose a plan that aligns with your business goals and start transforming your online
                         engagement.
                     </p>
                 </div>
-
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={3}
                     centeredSlides={false}
                     initialSlide={1}
+                    className={styles.swiperT}
                     centeredSlidesBounds={false}
                     modules={[Navigation]}
                     navigation={{
@@ -129,6 +130,15 @@ const Plans = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <ul className={styles.cardsList}>
+                    {plans.map((plan) => (
+                            <li key={plan.id} className={styles.cardsItem}>
+                                <PlanCard plan={plan}/>
+                            </li>
+                        )
+                    )
+                    }
+                </ul>
                 <button className={`${styles.arrow} ${styles.arrowLeft}`}>
                     <svg width="82" height="82">
                         <use href="/img/icons.svg#icon-arrow-right"/>

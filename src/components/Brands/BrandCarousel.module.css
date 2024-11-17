@@ -29,11 +29,15 @@
 .logos:hover .logosSlide {
     animation-play-state: paused;
 }
+
 .logosSlide {
     display: inline-block;
-    animation: 35s slide infinite linear ;
+    animation: 35s slide infinite linear;
 }
 
+.title {
+    align-items: center;
+}
 
 .brandLogo {
     width: 10rem;
