@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PlanCard.module.css';
 import Button from "@/components/Button/Button";
 
-const PlanCard = ({plan}) => {
+const PlanCard = ({plan, handleClick}) => {
     return (
         <div className={styles.planCard}>
             <h3 className={styles.planCardTitle}>{plan.title}</h3>
@@ -22,7 +22,7 @@ const PlanCard = ({plan}) => {
                 ))}
             </ul>
             <div className={styles.planCardButton}>
-                <Button text={"Purchase"}></Button>
+                <Button text={"Purchase"} onClick={() => handleClick(plan)}></Button>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import SectionTitleStyles from "../SectionTitle/SectionTitle.module.css";
 import ContactForm from "@/components/ContactForm/ContactForm";
 
-const Contacts = () => {
+const Contacts = ({plan}) => {
     return (
         <section className={styles.about} id="contacts">
             <div className={containerStyles.container}>
@@ -23,7 +23,7 @@ const Contacts = () => {
                         Book a consultation today and discover how quality content and a
                         strategic approach can make your business stand out on social media.
                     </p>
-                    <ContactForm/>
+                    <ContactForm plan={plan}/>
                 </div>
             </div>
         </section>

@@ -7,9 +7,17 @@ import BrandCarousel from "@/components/Brands/BrandCarousel";
 import FAQ from "@/components/FAQ/FAQ";
 import Services from "@/components/Services/Services";
 import Contacts from "@/components/Contacts/Contacts";
+import {useState} from "react";
 
 
 function Home() {
+    const [selectedPlan, setSelectedPlan] = useState(null); // Состояние для выбранного плана
+
+    const handlePlanClick = (plan) => {
+        setSelectedPlan(plan);
+        console.log("Selected Plan:", plan);
+    };
+
     return (
         <>
             <Head>
@@ -23,9 +31,9 @@ function Home() {
                 <BrandCarousel/>
                 <Services/>
                 <About/>
-                <Plans/>
+                <Plans onPlanClick={handlePlanClick}/>
                 <FAQ/>
-                <Contacts/>
+                <Contacts plan={selectedPlan}/>
             </main>
             <footer>
 

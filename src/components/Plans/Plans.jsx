@@ -12,7 +12,7 @@ import SectionBadge from "@/components/SectionBadge/SectionBadge";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionTitleStyles from "@/components/SectionTitle/SectionTitle.module.css";
 
-const Plans = () => {
+const Plans = ({onPlanClick}) => {
     const plans = [
         {
             id: 1,
@@ -92,6 +92,18 @@ const Plans = () => {
         },
     ];
 
+    const scrollToContacts = () => {
+        const pricingSection = document.getElementById("contacts");
+        if (pricingSection) {
+            pricingSection.scrollIntoView({behavior: "smooth"});
+        }
+    };
+
+    const handlePlanClick = (plan) => {
+        onPlanClick(plan);
+        scrollToContacts();
+    }
+
     return (
         <section className={styles.plans} id="pricing">
             <div className={containerStyles.container}>
@@ -112,7 +124,7 @@ const Plans = () => {
                     </p>
                 </div>
                 <Swiper
-                    spaceBetween={20}
+                    spaceBetween={32}
                     slidesPerView={3}
                     centeredSlides={false}
                     initialSlide={1}
@@ -126,14 +138,14 @@ const Plans = () => {
                 >
                     {plans.map((plan) => (
                         <SwiperSlide key={plan.id}>
-                            <PlanCard plan={plan}/>
+                            <PlanCard plan={plan} handleClick={handlePlanClick}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
                 <ul className={styles.cardsList}>
                     {plans.map((plan) => (
                             <li key={plan.id} className={styles.cardsItem}>
-                                <PlanCard plan={plan}/>
+                                <PlanCard plan={plan} handleClick={handlePlanClick}/>
                             </li>
                         )
                     )

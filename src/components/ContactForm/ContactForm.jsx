@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import styles from "./ContactForm.module.css";
 import Button from "@/components/Button/Button";
 
-const ContactForm = () => {
+const ContactForm = ({ plan }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -12,6 +12,16 @@ const ContactForm = () => {
     });
 
     const [isSent, setIsSent] = useState(false);
+
+    // Обновляем сообщение при изменении плана
+    useEffect(() => {
+        if (plan) {
+            setFormData((prevData) => ({
+                ...prevData,
+                message: `Hello! I’m interested in the ${plan.title} plan. I would like to learn more details and start collaborating. Looking forward to your response!`,
+            }));
+        }
+    }, [plan]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -34,7 +44,7 @@ const ContactForm = () => {
 
             setIsSent(true);
             setFormData({
-                from_name: "",
+                name: "",
                 email: "",
                 phone: "",
                 message: "",
@@ -99,7 +109,7 @@ const ContactForm = () => {
                         required
                     ></textarea>
                 </div>
-                <Button text={'Submit'} type="submit" className={styles.submitButton}></Button>
+                <Button text={"Submit"} type="submit" className={styles.submitButton}></Button>
                 {isSent && <p className={styles.successMessage}>Message sent successfully!</p>}
             </form>
         </section>
