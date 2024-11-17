@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Services from "@/components/Services/Services";
 import Contacts from "@/components/Contacts/Contacts";
 import {useState} from "react";
+import Footer from "@/components/Footer/Footer";
 
 interface Plan {
     description: string;
@@ -47,9 +48,7 @@ function Home() {
                 <FAQ/>
                 <Contacts plan={selectedPlan}/>
             </main>
-            <footer>
-
-            </footer>
+            <Footer/>
         </>
     );
 }

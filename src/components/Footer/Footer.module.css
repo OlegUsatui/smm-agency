@@ -1,0 +1,75 @@
+.footer {
+    position: relative;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.footerThumb {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footerAddress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.875rem;
+}
+
+.footerContacts {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-style: normal;
+    opacity: 0.5;
+}
+
+.footerContacts:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.socialList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.socialLink {
+    display: inline-block;
+}
+
+.socialSvg {
+    fill: #fff;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footerThumb {
+        flex-direction: row;
+        align-items: center;
+    }
+    .footerContacts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social {
+        text-align: center;
+    }
+}

@@ -9,6 +9,7 @@ const BrandCarousel = () => {
         '/img/brand2.svg',
         '/img/brand3.svg',
         '/img/brand4.svg',
+        '/img/brand5.svg',
     ];
 
     return (
