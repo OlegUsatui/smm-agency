@@ -1,9 +1,9 @@
 .planCard {
     background: rgba(255, 255, 255, .04);
-    border-radius: 16px;
+    border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, .1);
     color: var(--color-primary);
-    padding: 48px 32px 94px;
+    padding: 3rem 2rem 94px;
     /*width: 450px;*/
     height: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -13,46 +13,46 @@
 
 .planCardTitle {
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .planCardPrice {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .planCardPriceValue {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     color: var(--color-primary);
 }
 
 .planCardPriceTerm {
-    margin-left: 8px;
+    margin-left: 0.5rem;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #ccc;
 }
 
 .planCardDescription {
     font-size: 1rem;
     color: #ccc;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .planCardFeaturesTitle {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
 .planCardFeatures {
     list-style: none;
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0 0 2.5rem;
     text-align: left;
 }
 
@@ -61,18 +61,18 @@
     color: var(--color-primary);
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .checkIcon {
-    margin-right: 8px;
+    margin-right: 0.5rem;
     color: #4caf50;
     font-weight: bold;
 }
 
 .planCardButton {
     position: absolute;
-    bottom: 48px;
-    left: 32px;
-    width: calc(100% - 64px);
+    bottom: 3rem;
+    left: 2rem;
+    width: calc(100% - 4rem);
 }

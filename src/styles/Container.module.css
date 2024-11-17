@@ -1,31 +1,28 @@
 .container {
-    width: 100%; /* Контейнер занимает всю ширину */
-    max-width: 1200px; /* Максимальная ширина для больших экранов */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 0 16px; /* Отступы по бокам для мобильных устройств */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Адаптивность для планшетов */
 @media (min-width: 768px) {
     .container {
-        padding: 0 24px; /* Увеличиваем отступы для планшетов */
+        padding: 0 1.5rem;
     }
 }
 
-/* Адаптивность для больших экранов */
 @media (min-width: 1024px) {
     .container {
-        padding: 0 32px; /* Еще больше отступов для больших экранов */
+        padding: 0 2rem;
     }
 }
 
-/* Адаптивность для очень широких экранов */
 @media (min-width: 1440px) {
     .container {
-        padding: 0 64px; /* Широкие отступы для десктопов */
+        padding: 0 4rem;
     }
 }

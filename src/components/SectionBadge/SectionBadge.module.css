@@ -2,8 +2,8 @@
     display: inline-block;
     border: 1px solid #2A2A2A;
     color: var(--color-primary);
-    font-size: 14px;
-    padding: 6px 12px;
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
     width: auto;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 }

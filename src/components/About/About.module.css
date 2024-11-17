@@ -3,14 +3,12 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
-    gap: 55px;
 }
 
 .title {
-    max-width: 600px;
+    max-width: 37.5rem;
 }
 
 .description {
-    max-width: 600px;
+    max-width: 37.5rem;
 }

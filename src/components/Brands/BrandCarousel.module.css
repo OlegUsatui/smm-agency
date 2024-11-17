@@ -4,12 +4,12 @@
     flex-direction: column;
     justify-content: center;
 
-    gap: 55px;
+    gap: 3.4375rem;
 }
 .logos {
     position: relative;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 3.75rem 0;
     white-space: nowrap;
     max-width: 100%;
 }
@@ -18,7 +18,7 @@
 .logos:after {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 15.625rem;
     height: 100%;
     content: '';
     z-index: 2;
@@ -44,8 +44,8 @@
 
 
 .brandLogo {
-    height: 50px;
-    margin: 0 40px;
+    height: 3.125rem;
+    margin: 0 2.5rem;
 }
 
 /* Анимация движения */
