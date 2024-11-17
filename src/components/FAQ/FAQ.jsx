@@ -44,7 +44,7 @@ const FAQ = () => {
     };
 
     return (
-        <section className={styles.faqSection}>
+        <section className={styles.faqSection} id="faq">
             <div className={containerStyles.container}>
                 <div className={styles.faqHeader}>
                     <SectionBadge text="FAQ"/>
