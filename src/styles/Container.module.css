@@ -8,6 +8,9 @@
     align-items: center;
     justify-content: center;
 }
+.title {
+    color: var(--color-dark-gray);
+}
 
 @media (min-width: 768px) {
     .container {

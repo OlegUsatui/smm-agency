@@ -38,14 +38,12 @@
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
         gap: 1rem;
         padding: 1rem;
         width: 100%;
     }
     .cardsItem {
-        flex: 1 0 30%;
+        flex: 1 0 33%;
         scroll-snap-align: start;
         object-fit: cover;
     }

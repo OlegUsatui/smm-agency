@@ -10,8 +10,9 @@ const BrandCarousel = () => {
     ];
 
     return (
-        <section className={styles.brandCarousel}>
+        <section>
             <div className={containerStyles.container}>
+                <p className={styles.title}>Helping brands create quality content and drive successful promotion</p>
                 <div className={styles.logos}>
                     <div className={styles.logosSlide}>
                         {brands.map((brand, index) => (
