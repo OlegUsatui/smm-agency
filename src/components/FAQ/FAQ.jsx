@@ -59,9 +59,7 @@ const FAQ = () => {
                     {questions.map((item, index) => (
                         <div
                             key={index}
-                            className={`${styles.faqItem} ${
-                                activeIndex === index ? styles.active : ''
-                            }`}
+                            className={styles.faqItem}
                             onClick={() => toggleQuestion(index)}
                         >
                             <div className={styles.faqQuestion}>
