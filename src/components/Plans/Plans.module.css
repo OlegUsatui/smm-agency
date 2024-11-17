@@ -1,4 +1,5 @@
 .plans {
+    position: relative;
     padding: 0.625rem 0;
 }
 
@@ -6,15 +7,32 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 66%;
     transform: translate(-50%, -50%);
-    width: 18.75rem;
+    width: 55.75rem;
+    height: 10rem;
     background: linear-gradient(180deg, rgba(128, 0, 255, 1), rgba(0, 0, 0, 0));
     filter: blur(70px);
     border-radius: 50%;
     z-index: 0;
 }
+/*.innerContainer {*/
+/*    position: relative;*/
+/*}*/
 
+/*.innerContainer:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 60%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    width: 100%;*/
+/*    height: 100px;*/
+/*    background: linear-gradient(180deg, rgba(128, 0, 255, 1), rgba(0, 0, 0, 0));*/
+/*    filter: blur(120px);*/
+/*    border-radius: 50%;*/
+/*    z-index: 0;*/
+/*}*/
 .cardsList {
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +44,44 @@
     max-width: 100%;
     height: auto;
 }
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.arrowLeft {
+    left: -3rem;
+}
+
+.arrowLeft svg {
+    transform: rotate(180deg);
+    fill: var(--color-primary);
+}
+
+.arrowRight {
+    right: -3rem;
+}
+.arrowRight svg {
+    fill: var(--color-primary);
+}
 
 @media (min-width: 768px) {
 

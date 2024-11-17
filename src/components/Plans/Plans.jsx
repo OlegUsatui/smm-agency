@@ -2,6 +2,12 @@ import React from 'react';
 import styles from './Plans.module.css';
 import PlanCard from "@/components/PlanCard/PlanCard";
 import containerStyles from '../../styles/Container.module.css';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import {Navigation} from "swiper/modules";
 
 const Plans = () => {
     const plans = [
@@ -34,22 +40,6 @@ const Plans = () => {
         },
         {
             id: 3,
-            title: "SMM Management",
-            price: "10 000 NOK",
-            period: "/month",
-            description:
-                "Perfect for clients who already have their own content but need professional management of their social media platforms.",
-            features: [
-                {name: "Instagram posts (2 posts/week)"},
-                {name: "Stories (up to 3 per day)"},
-                {name: "Reels (2 per week)"},
-                {name: "Engagement with comments and messages"},
-                {name: "Targeted advertising setup and optimization"},
-                {name: "Analytics monitoring and reporting"},
-            ],
-        },
-        {
-            id: 4,
             title: "SMM + Content Creation",
             price: "15 000 NOK",
             period: "/month",
@@ -62,6 +52,22 @@ const Plans = () => {
                 {name: "Instagram posts (2 posts/week)"},
                 {name: "Stories (up to 3 per day)"},
                 {name: "1 storytelling set per week"},
+                {name: "Targeted advertising setup and optimization"},
+                {name: "Analytics monitoring and reporting"},
+            ],
+        },
+        {
+            id: 4,
+            title: "SMM Management",
+            price: "10 000 NOK",
+            period: "/month",
+            description:
+                "Perfect for clients who already have their own content but need professional management of their social media platforms.",
+            features: [
+                {name: "Instagram posts (2 posts/week)"},
+                {name: "Stories (up to 3 per day)"},
+                {name: "Reels (2 per week)"},
+                {name: "Engagement with comments and messages"},
                 {name: "Targeted advertising setup and optimization"},
                 {name: "Analytics monitoring and reporting"},
             ],
@@ -86,13 +92,34 @@ const Plans = () => {
     return (
         <section className={styles.plans} id="plans">
             <div className={containerStyles.container}>
-                <ul className={styles.cardsList}>
+                <Swiper
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    centeredSlides={false}
+                    initialSlide={1}
+                    centeredSlidesBounds={false}
+                    modules={[Navigation]}
+                    navigation={{
+                        nextEl: `.${styles.arrowRight}`,
+                        prevEl: `.${styles.arrowLeft}`,
+                    }}
+                >
                     {plans.map((plan) => (
-                        <li key={plan.id} className={styles.cardsItem}>
+                        <SwiperSlide key={plan.id}>
                             <PlanCard plan={plan}/>
-                        </li>
+                        </SwiperSlide>
                     ))}
-                </ul>
+                </Swiper>
+                <button className={`${styles.arrow} ${styles.arrowLeft}`}>
+                    <svg width="82" height="82">
+                        <use href="/img/icons.svg#icon-arrow-right"/>
+                    </svg>
+                </button>
+                <button className={`${styles.arrow} ${styles.arrowRight}`}>
+                    <svg width="82" height="82">
+                        <use href="/img/icons.svg#icon-arrow-right"/>
+                    </svg>
+                </button>
             </div>
         </section>
 

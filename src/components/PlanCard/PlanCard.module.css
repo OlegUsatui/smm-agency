@@ -37,7 +37,7 @@
 
 .planCardDescription {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .planCardFeaturesTitle {
@@ -58,13 +58,11 @@
     font-size: 1.5rem;
     color: var(--color-primary);
     display: flex;
-    align-items: center;
     margin-bottom: 0.5rem;
 }
 
 .checkIcon {
     margin-right: 0.5rem;
-    color: var(--color-salad);
     font-weight: bold;
 }
 
@@ -75,40 +73,35 @@
     width: calc(100% - 4rem);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    .planCard {
+        max-width: 28rem;
+        min-height: 53rem;
+    }
+    .planCardTitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 
-}
+    .planCardPriceValue {
+        font-size: 3rem;
+        font-weight: 400;
+    }
 
-/*@media (min-width: 1024px) {*/
-/*    .planCard {*/
-/*        max-width: 21rem;*/
-/*    }*/
-/*    .planCardTitle {*/
-/*        font-size: 1rem;*/
-/*    }*/
+    .planCardPriceTerm {
+        font-size: 1rem;
+    }
 
-/*    .planCardPriceValue {*/
-/*        font-size: 2rem;*/
-/*    }*/
+    .planCardDescription {
+        font-size: 1.2rem;
+    }
 
-/*    .planCardPriceTerm {*/
-/*        font-size: 1rem;*/
-/*    }*/
-
-/*    .planCardDescription {*/
-/*        font-size: 1rem;*/
-/*    }*/
-
-/*    .planCardFeaturesTitle {*/
-/*        font-size: 1rem;*/
-/*    }*/
+    .planCardFeaturesTitle {
+        font-size: 1.2rem;
+    }
 
 
-/*    .planCardFeature {*/
-/*        font-size: 1rem;*/
-/*    }*/
-/*}*/
-
-@media (min-width: 1440px) {
-
+    .planCardFeature {
+        font-size: 1.2rem;
+    }
 }
