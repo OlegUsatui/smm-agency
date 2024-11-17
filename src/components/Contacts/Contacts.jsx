@@ -4,6 +4,7 @@ import containerStyles from "../../styles/Container.module.css";
 import SectionBadge from "../SectionBadge/SectionBadge";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import SectionTitleStyles from "../SectionTitle/SectionTitle.module.css";
+import ContactForm from "@/components/ContactForm/ContactForm";
 
 const Contacts = () => {
     return (
@@ -22,6 +23,7 @@ const Contacts = () => {
                         Book a consultation today and discover how quality content and a
                         strategic approach can make your business stand out on social media.
                     </p>
+                    <ContactForm/>
                 </div>
             </div>
         </section>

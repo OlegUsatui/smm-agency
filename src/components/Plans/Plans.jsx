@@ -110,6 +110,7 @@ const Plans = () => {
                         engagement.
                     </p>
                 </div>
+
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={3}
