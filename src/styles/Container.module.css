@@ -1,0 +1,31 @@
+.container {
+    width: 100%; /* Контейнер занимает всю ширину */
+    max-width: 1200px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 16px; /* Отступы по бокам для мобильных устройств */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Адаптивность для планшетов */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px; /* Увеличиваем отступы для планшетов */
+    }
+}
+
+/* Адаптивность для больших экранов */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px; /* Еще больше отступов для больших экранов */
+    }
+}
+
+/* Адаптивность для очень широких экранов */
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 64px; /* Широкие отступы для десктопов */
+    }
+}

@@ -1,8 +1,7 @@
-
 .faqSection {
     background: #000;
     color: var(--color-primary);
-    padding: 40px 20px;
+    padding: 40px 0;
     text-align: center;
 
 }

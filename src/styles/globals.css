@@ -61,6 +61,7 @@ p {
     --color-primary: #FFFFFF;
 
     --color-secondary: linear-gradient(135deg, rgba(128, 0, 255, 0.9), rgba(0, 0, 0, 0.5));
+    --title-margin-bottom: 20px;
     --color-secondary-60: rgba(244, 244, 244, 0.6);
     --color-secondary-40: rgba(244, 244, 244, 0.4);
     --color-secondary-20: rgba(244, 244, 244, 0.2);

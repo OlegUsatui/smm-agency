@@ -8,7 +8,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Services from "@/components/Services/Services";
 
 
-export default function Home() {
+function Home() {
     return (
         <>
             <Head>
@@ -31,3 +31,4 @@ export default function Home() {
         </>
     );
 }
+export default Home;

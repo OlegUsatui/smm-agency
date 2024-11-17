@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Plans.module.css';
 import PlanCard from "@/components/PlanCard/PlanCard";
+import containerStyles from '../../styles/Container.module.css';
 
 const Plans = () => {
     const plans = [
@@ -12,9 +13,9 @@ const Plans = () => {
             description:
                 "Perfect for quick creation of high-quality content to refresh your profile or boost a marketing campaign.",
             features: [
-                { name: "One-day photo and video shoot" },
-                { name: "Editing of 3 Reels" },
-                { name: "Processing of 20 photos" },
+                {name: "One-day photo and video shoot"},
+                {name: "Editing of 3 Reels"},
+                {name: "Processing of 20 photos"},
             ],
         },
         {
@@ -25,10 +26,10 @@ const Plans = () => {
             description:
                 "A package tailored for brands needing regular content creation for their social media channels.",
             features: [
-                { name: "2-3 content shoots per month (photo and video)" },
-                { name: "Editing of 6-9 Reels per month" },
-                { name: "Processing of 20 photos per month" },
-                { name: "Content calendar planning" },
+                {name: "2-3 content shoots per month (photo and video)"},
+                {name: "Editing of 6-9 Reels per month"},
+                {name: "Processing of 20 photos per month"},
+                {name: "Content calendar planning"},
             ],
         },
         {
@@ -39,12 +40,12 @@ const Plans = () => {
             description:
                 "Perfect for clients who already have their own content but need professional management of their social media platforms.",
             features: [
-                { name: "Instagram posts (2 posts/week)" },
-                { name: "Stories (up to 3 per day)" },
-                { name: "Reels (1 per week)" },
-                { name: "Engagement with comments and messages" },
-                { name: "Targeted advertising setup and optimization" },
-                { name: "Analytics monitoring and reporting" },
+                {name: "Instagram posts (2 posts/week)"},
+                {name: "Stories (up to 3 per day)"},
+                {name: "Reels (1 per week)"},
+                {name: "Engagement with comments and messages"},
+                {name: "Targeted advertising setup and optimization"},
+                {name: "Analytics monitoring and reporting"},
             ],
         },
         {
@@ -55,14 +56,14 @@ const Plans = () => {
             description:
                 "A combined package that includes content creation and professional social media management.",
             features: [
-                { name: "2-3 content shoots per month" },
-                { name: "Editing of 6-9 Reels per month" },
-                { name: "Processing of 20 photos per month" },
-                { name: "Instagram posts (2 posts/week)" },
-                { name: "Stories (up to 3 per day)" },
-                { name: "1 storytelling set per week" },
-                { name: "Targeted advertising setup and optimization" },
-                { name: "Analytics monitoring and reporting" },
+                {name: "2-3 content shoots per month"},
+                {name: "Editing of 6-9 Reels per month"},
+                {name: "Processing of 20 photos per month"},
+                {name: "Instagram posts (2 posts/week)"},
+                {name: "Stories (up to 3 per day)"},
+                {name: "1 storytelling set per week"},
+                {name: "Targeted advertising setup and optimization"},
+                {name: "Analytics monitoring and reporting"},
             ],
         },
         {
@@ -73,28 +74,30 @@ const Plans = () => {
             description:
                 "For clients who create their own content but need help organizing and analyzing it professionally.",
             features: [
-                { name: "Development of a content calendar" },
-                { name: "SEO optimization for posts" },
-                { name: "Coordination of 3-5 posts per week" },
-                { name: "Text editing and formatting" },
-                { name: "Monitoring publication performance" },
+                {name: "Development of a content calendar"},
+                {name: "SEO optimization for posts"},
+                {name: "Coordination of 3-5 posts per week"},
+                {name: "Text editing and formatting"},
+                {name: "Monitoring publication performance"},
             ],
         },
     ];
 
     return (
         <section className={styles.plans} id="plans">
-            <ul className={styles.cardsList}>
-                <li className={styles.cardsItem}>
-                    <PlanCard plan={plans[0]}/>
-                </li>
-                <li className={styles.cardsItem}>
-                    <PlanCard plan={plans[1]}/>
-                </li>
-                <li className={styles.cardsItem}>
-                    <PlanCard plan={plans[2]}/>
-                </li>
-            </ul>
+            <div className={containerStyles.container}>
+                <ul className={styles.cardsList}>
+                    <li className={styles.cardsItem}>
+                        <PlanCard plan={plans[0]}/>
+                    </li>
+                    <li className={styles.cardsItem}>
+                        <PlanCard plan={plans[1]}/>
+                    </li>
+                    <li className={styles.cardsItem}>
+                        <PlanCard plan={plans[2]}/>
+                    </li>
+                </ul>
+            </div>
         </section>
 
     );

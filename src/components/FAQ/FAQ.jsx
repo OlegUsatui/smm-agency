@@ -3,6 +3,7 @@ import styles from './FAQ.module.css';
 import SectionBadge from "@/components/SectionBadge/SectionBadge";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionTitleStyles from "@/components/SectionTitle/SectionTitle.module.css";
+import containerStyles from '../../styles/Container.module.css';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0); // Управление активным вопросом
@@ -44,38 +45,40 @@ const FAQ = () => {
 
     return (
         <section className={styles.faqSection}>
-            <div className={styles.faqHeader}>
-                <SectionBadge text="Frequently Asked Questions" />
-                <SectionTitle>
-                    Everything you <span className={SectionTitleStyles.highlighted}>need</span> to know.
-                </SectionTitle>
-                <p>
-                    Got questions? We’ve got answers. Here’s everything you need to know before getting started.
-                </p>
-            </div>
-            <div className={styles.faqList}>
-                {questions.map((item, index) => (
-                    <div
-                        key={index}
-                        className={`${styles.faqItem} ${
-                            activeIndex === index ? styles.active : ''
-                        }`}
-                        onClick={() => toggleQuestion(index)}
-                    >
-                        <div className={styles.faqQuestion}>
-                            {item.question}
-                            <span className={styles.faqToggle}>
+            <div className={containerStyles.container}>
+                <div className={styles.faqHeader}>
+                    <SectionBadge text="Frequently Asked Questions"/>
+                    <SectionTitle>
+                        Everything you <span className={SectionTitleStyles.highlighted}>need</span> to know.
+                    </SectionTitle>
+                    <p>
+                        Got questions? We’ve got answers. Here’s everything you need to know before getting started.
+                    </p>
+                </div>
+                <div className={styles.faqList}>
+                    {questions.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.faqItem} ${
+                                activeIndex === index ? styles.active : ''
+                            }`}
+                            onClick={() => toggleQuestion(index)}
+                        >
+                            <div className={styles.faqQuestion}>
+                                {item.question}
+                                <span className={styles.faqToggle}>
                 {activeIndex === index ? '-' : '+'}
               </span>
+                            </div>
+                            {activeIndex === index && (
+                                <div className={styles.faqAnswer}>{item.answer}</div>
+                            )}
                         </div>
-                        {activeIndex === index && (
-                            <div className={styles.faqAnswer}>{item.answer}</div>
-                        )}
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
-    );
+);
 };
 
 export default FAQ;
