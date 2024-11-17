@@ -5,8 +5,10 @@ import containerStyles from '../../styles/Container.module.css';
 
 const BrandCarousel = () => {
     const brands = [
+        '/img/brand1.png',
+        '/img/brand2.svg',
+        '/img/brand3.svg',
         '/img/brand4.svg',
-        '/img/brand5.svg',
     ];
 
     return (
