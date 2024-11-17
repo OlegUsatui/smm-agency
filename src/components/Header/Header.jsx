@@ -19,10 +19,25 @@ const Header = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+
+        // Cleanup scroll event listener on unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cleanup overflow style on unmount
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isMenuOpen]);
 
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev);
@@ -33,7 +48,10 @@ const Header = () => {
     };
 
     return (
-        <header id="header" className={styles.header}>
+        <header
+            id="header"
+            className={`${styles.header} ${isMenuOpen ? styles.menuIsOpened : ''}`}
+        >
             <div className={containerStyles.container}>
                 <div className={styles.container}>
                     <div className={styles.innerContainer}>
@@ -62,42 +80,63 @@ const Header = () => {
                             <div className={styles.mobileMenu}>
                                 <button
                                     type="button"
-                                    className={`${styles.close}`}
+                                    className={styles.close}
                                     aria-label="Close menu"
                                     onClick={closeMenu}
                                 >
-                                    <svg className={styles.icon} width="24" height="24">
-                                        <use href="/img/icons.svg#icon-cross" />
-                                    </svg>
                                 </button>
                                 <ul className={styles.navigationMenu}>
                                     <li className={styles.menuItem}>
-                                        <a href="#home" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#home"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             Home
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#about" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#about"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             About
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#services" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#services"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             Services
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#pricing" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#pricing"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             Pricing
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#faq" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#faq"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             FAQ
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#contacts" className={styles.menuLink} onClick={closeMenu}>
+                                        <a
+                                            href="#contacts"
+                                            className={styles.menuLink}
+                                            onClick={closeMenu}
+                                        >
                                             Contact
                                         </a>
                                     </li>

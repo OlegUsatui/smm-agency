@@ -34,7 +34,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow: auto;
 }
-
+section {
+    scroll-margin-top: 80px;
+}
 a {
     color: var(--color-primary);
     text-decoration: none;
