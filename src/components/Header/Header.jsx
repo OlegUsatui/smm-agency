@@ -82,8 +82,13 @@ const Header = () => {
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
-                                        <a href="#plans" className={styles.menuLink} onClick={closeMenu}>
+                                        <a href="#services" className={styles.menuLink} onClick={closeMenu}>
                                             Services
+                                        </a>
+                                    </li>
+                                    <li className={styles.menuItem}>
+                                        <a href="#pricing" className={styles.menuLink} onClick={closeMenu}>
+                                            Pricing
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>

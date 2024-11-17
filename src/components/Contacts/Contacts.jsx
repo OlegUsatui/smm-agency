@@ -11,7 +11,7 @@ const Contacts = () => {
         <section className={styles.about} id="contacts">
             <div className={containerStyles.container}>
                 <div className={styles.innerContainer}>
-                    <SectionBadge text="About"/>
+                    <SectionBadge text="Contacts"/>
                     <div className={styles.title}>
                         <SectionTitle>
                             Ready to take

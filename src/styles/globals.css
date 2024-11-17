@@ -83,6 +83,7 @@ p {
     --color-secondary-10: rgba(244, 244, 244, 0.1);
 
     --color-background-40: rgba(255, 255, 255, .04);
+    --color-background-80: rgba(255, 255, 255, .08);
     --color-bordeer-10: rgba(255, 255, 255, .1);
     --bow-shadow-10: 0 4px 10px rgba(0, 0, 0, 0.1);
     --font-main: "DM Sans", Helvetica, Arial, sans-serif;

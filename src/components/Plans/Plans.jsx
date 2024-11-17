@@ -93,7 +93,7 @@ const Plans = () => {
     ];
 
     return (
-        <section className={styles.plans} id="plans">
+        <section className={styles.plans} id="pricing">
             <div className={containerStyles.container}>
                 <div className={styles.plansHeader}>
                     <SectionBadge text="Pricing"/>
