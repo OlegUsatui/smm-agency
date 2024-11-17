@@ -37,11 +37,7 @@
 
 
 @media (min-width: 768px) {
-    .cardsList {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+
 
     .cardsItem {
         flex: 1 1 100%;
@@ -51,6 +47,12 @@
 }
 
 @media (min-width: 1024px) {
+    .cardsList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .cardsItem {
         flex: 1 1 30%;
     }

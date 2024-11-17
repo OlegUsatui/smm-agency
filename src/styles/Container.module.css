@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,18 +11,18 @@
 
 @media (min-width: 768px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 3rem;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        padding: 0 2rem;
+        padding: 0 4rem;
     }
 }
 
 @media (min-width: 1440px) {
     .container {
-        padding: 0 4rem;
+        padding: 0 5rem;
     }
 }

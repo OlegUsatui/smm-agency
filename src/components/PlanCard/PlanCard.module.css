@@ -1,19 +1,20 @@
 .planCard {
-    background: rgba(255, 255, 255, .04);
+    background: var(--color-background-40);
     border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid var(--color-bordeer-10);
     color: var(--color-primary);
-    padding: 3rem 2rem 94px;
-    /*width: 450px;*/
+    padding: 3rem 2rem 5.875rem;
     height: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 30rem;
+    box-shadow: var(--bow-shadow-10);
     margin: 0 auto;
     position: relative;
 }
 
 .planCardTitle {
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .planCardPrice {
@@ -33,17 +34,15 @@
     margin-left: 0.5rem;
     font-weight: 400;
     font-size: 1.5rem;
-    color: #ccc;
 }
 
 .planCardDescription {
-    font-size: 1rem;
-    color: #ccc;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .planCardFeaturesTitle {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: left;
@@ -57,7 +56,7 @@
 }
 
 .planCardFeature {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--color-primary);
     display: flex;
     align-items: center;
@@ -66,7 +65,7 @@
 
 .checkIcon {
     margin-right: 0.5rem;
-    color: #4caf50;
+    color: var(--color-salad);
     font-weight: bold;
 }
 
@@ -75,4 +74,16 @@
     bottom: 3rem;
     left: 2rem;
     width: calc(100% - 4rem);
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1440px) {
+
 }

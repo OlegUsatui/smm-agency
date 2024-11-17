@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     background: var(--color-secondary);
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     padding: 0.9375rem 1.875rem;
     color: var(--color-primary);
     border-radius: 0.625rem;
@@ -19,17 +19,17 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Начальная позиция полосы загрузки */
+    left: -100%;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
     z-index: 0;
-    transform: skewX(-45deg); /* Наклон полосы */
+    transform: skewX(-45deg);
     transition: none;
 }
 
 .button:hover::before {
-    left: 100%; /* Движение полосы к правому краю */
+    left: 100%;
     animation: loading 0.8s linear infinite;
 }
 

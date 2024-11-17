@@ -61,7 +61,7 @@ ul {
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     opacity: 0.5;
     margin: 0;
 }
@@ -74,14 +74,17 @@ p {
 
 :root {
     --color-primary: #FFFFFF;
-
     --color-secondary: linear-gradient(135deg, rgba(128, 0, 255, 0.9), rgba(0, 0, 0, 0.5));
+    --color-salad: #4caf50;
     --title-margin-bottom: 1.25rem;
     --color-secondary-60: rgba(244, 244, 244, 0.6);
     --color-secondary-40: rgba(244, 244, 244, 0.4);
     --color-secondary-20: rgba(244, 244, 244, 0.2);
     --color-secondary-10: rgba(244, 244, 244, 0.1);
 
+    --color-background-40: rgba(255, 255, 255, .04);
+    --color-bordeer-10: rgba(255, 255, 255, .1);
+    --bow-shadow-10: 0 4px 10px rgba(0, 0, 0, 0.1);
     --font-main: "DM Sans", Helvetica, Arial, sans-serif;
     --trns-slow: 600ms ease-out;
     --trns-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
