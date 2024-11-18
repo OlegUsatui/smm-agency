@@ -11,10 +11,6 @@
     transition: all var(--trns-fast);
 }
 
-.header.menuIsOpened {
-    transform: translateY(-150%);
-}
-
 .header.fixed {
     background: transparent;
     transition: all var(--trns-fast);
@@ -116,7 +112,7 @@
 }
 
 .mobileMenuContainer.isOpen .mobileMenu {
-    transform: translateX(0) translateY(18%);
+    transform: translateX(0);
     transition: transform 0.25s linear;
     background-color: black;
 }
@@ -129,8 +125,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 60%;
+    height: 100%;
+    width: 100%;
     padding: 1.25rem;
     text-align: center;
     transform: translateX(100%);

@@ -2,6 +2,7 @@
     position: relative;
     color: var(--color-primary);
     text-align: center;
+    overflow: hidden;
 }
 
 .faqSection::before {
