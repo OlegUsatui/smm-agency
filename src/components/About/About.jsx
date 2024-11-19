@@ -12,7 +12,7 @@ const About = () => {
                 <div className={styles.innerContainer}>
                     <SectionBadge text="About"/>
                     <div className={styles.title}>
-                        <SectionTitle>Growing your <span
+                        <SectionTitle>Growing your<span
                             className={SectionTitleStyles.highlighted}>brand</span> together.</SectionTitle>
                     </div>
                     <p className={styles.description}>Hello! I&#39;m Olena, an SMM specialist with over 6 years of

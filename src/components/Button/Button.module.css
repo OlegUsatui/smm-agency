@@ -8,6 +8,7 @@
     border-radius: 0.8rem;
     overflow: hidden;
     z-index: 1;
+    text-transform: uppercase;
     transition: background 0.3s ease;
 }
 

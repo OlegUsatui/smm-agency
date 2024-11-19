@@ -6,7 +6,7 @@ import containerStyles from '../../styles/Container.module.css';
 
 const Services = () => {
     return (
-        <div className={styles.services} id="services">
+        <section className={styles.services} id="services">
             <div className={containerStyles.container}>
                 <SectionBadge text="Services"/>
                 <ul className={styles.servicesList}>
@@ -43,7 +43,7 @@ const Services = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
 
     );
 };

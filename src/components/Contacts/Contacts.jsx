@@ -11,7 +11,7 @@ const Contacts = ({plan}) => {
         <section className={styles.contacts} id="contacts">
             <div className={containerStyles.container}>
                 <div className={styles.innerContainer}>
-                    <SectionBadge text="Contacts"/>
+                    <SectionBadge text="Contact"/>
                     <div className={styles.title}>
                         <SectionTitle>
                             Ready to take

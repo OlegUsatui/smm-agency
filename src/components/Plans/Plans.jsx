@@ -108,12 +108,12 @@ const Plans = ({onPlanClick}) => {
         <section className={styles.plans} id="pricing">
             <div className={containerStyles.container}>
                 <div className={styles.plansHeader}>
-                    <SectionBadge text="Pricing"/>
+                    <SectionBadge text="Plans"/>
                     <div className={styles.plansHeaderTitle}>
                         <SectionTitle>
-                            Simple pricing, no
+                            Your brand, our
                             <span className={SectionTitleStyles.highlighted}>
-                                surprises.
+                               stand.
                             </span>
                         </SectionTitle>
                     </div>
