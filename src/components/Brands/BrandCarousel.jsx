@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './BrandCarousel.module.css';
 import Image from 'next/image'
-import containerStyles from '../../styles/Container.module.css';
+import containerStyles from '@/styles/Container.module.css';
 
 const BrandCarousel = () => {
     const brands = [

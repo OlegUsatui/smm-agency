@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Plans.module.css';
 import PlanCard from "@/components/PlanCard/PlanCard";
-import containerStyles from '../../styles/Container.module.css';
+import containerStyles from '@/styles/Container.module.css';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -113,8 +113,9 @@ const Plans = ({onPlanClick}) => {
                         <SectionTitle>
                             Your brand, our
                             <span className={SectionTitleStyles.highlighted}>
-                               stand.
+                               stand
                             </span>
+                            .
                         </SectionTitle>
                     </div>
                     <p className={styles.plansHeaderDescription}>Find the perfect package to elevate your social media

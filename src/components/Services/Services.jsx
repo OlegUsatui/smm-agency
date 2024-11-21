@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Services.module.css';
 import SectionBadge from "@/components/SectionBadge/SectionBadge";
-import containerStyles from '../../styles/Container.module.css';
+import containerStyles from '@/styles/Container.module.css';
 
 
 const Services = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './About.module.css';
-import SectionBadge from "../SectionBadge/SectionBadge";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import SectionTitleStyles from '../SectionTitle/SectionTitle.module.css';
-import containerStyles from '../../styles/Container.module.css';
+import SectionBadge from "@/components/SectionBadge/SectionBadge";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import SectionTitleStyles from '@/components/SectionTitle/SectionTitle.module.css';
+import containerStyles from '@/styles/Container.module.css';
 
 const About = () => {
     return (

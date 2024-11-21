@@ -3,7 +3,7 @@ import styles from './FAQ.module.css';
 import SectionBadge from "@/components/SectionBadge/SectionBadge";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionTitleStyles from "@/components/SectionTitle/SectionTitle.module.css";
-import containerStyles from '../../styles/Container.module.css';
+import containerStyles from '@/styles/Container.module.css';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0); // Управление активным вопросом

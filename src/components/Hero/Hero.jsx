@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import Button from "@/components/Button/Button";
-import containerStyles from '../../styles/Container.module.css';
+import containerStyles from '@/styles/Container.module.css';
 
 const Hero = () => {
     const scrollToPricing = () => {
