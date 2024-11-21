@@ -9,11 +9,11 @@
     overflow: hidden;
     z-index: 1;
     text-transform: uppercase;
-    transition: background 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .button:hover {
-    background: var(--color-secondary);
+    transform: scale(1.05);
 }
 
 .button::before {

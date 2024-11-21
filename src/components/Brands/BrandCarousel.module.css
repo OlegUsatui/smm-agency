@@ -45,12 +45,11 @@
     margin: 0 2.5rem;
 }
 
-/* Анимация движения */
 @keyframes slide {
     from {
-        transform: translateX(0); /* Начальная позиция */
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%); /* Сдвиг на всю ширину */
+        transform: translateX(-100%);
     }
 }
