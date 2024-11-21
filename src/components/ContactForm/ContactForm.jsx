@@ -3,7 +3,6 @@ import emailjs from "emailjs-com";
 import styles from "./ContactForm.module.css";
 import Button from "@/components/Button/Button";
 
-// Вспомогательный хук для управления состоянием формы
 const useContactForm = (plan) => {
     const [formData, setFormData] = useState({
         name: "",
@@ -32,10 +31,10 @@ const useContactForm = (plan) => {
     const handleSubmit = async () => {
         try {
             await emailjs.send(
-                "service_xjle318", // Замените на ID вашего EmailJS сервиса
-                "template_qk3cwej", // Замените на ID вашего EmailJS шаблона
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
                 formData,
-                "M0dKTMHYm72ukRtrr" // Замените на ваш Public Key (User ID)
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
             );
             setIsSent(true);
             setFormData({
@@ -62,7 +61,7 @@ const ContactForm = ({ plan }) => {
     };
 
     return (
-        <section className={styles.contactSection}>
+        <div className={styles.contactSection}>
             <form className={styles.form} onSubmit={handleFormSubmit}>
                 <div className={styles.inputGroup}>
                     <InputField
@@ -101,14 +100,13 @@ const ContactForm = ({ plan }) => {
                     required
                 />
                 <Button text="Submit" type="submit" className={styles.submitButton} />
-                {isSent && <p className={styles.successMessage}>Message sent successfully!</p>}
-                {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+                {isSent && <p>Message sent successfully!</p>}
+                {errorMessage && <p>{errorMessage}</p>}
             </form>
-        </section>
+        </div>
     );
 };
 
-// Компонент для текстовых полей
 const InputField = ({ label, type, name, placeholder, value, onChange, required = false }) => (
     <div className={styles.inputWrapper}>
         <label htmlFor={name}>{label}</label>
@@ -125,7 +123,6 @@ const InputField = ({ label, type, name, placeholder, value, onChange, required 
     </div>
 );
 
-// Компонент для текстовой области
 const TextAreaField = ({ label, name, placeholder, value, onChange, required = false }) => (
     <div className={styles.textAreaWrapper}>
         <label htmlFor={name}>{label}</label>

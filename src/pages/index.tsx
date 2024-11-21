@@ -1,3 +1,4 @@
+import {useState} from "react";
 import Head from "next/head";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -7,7 +8,6 @@ import BrandCarousel from "@/components/Brands/BrandCarousel";
 import FAQ from "@/components/FAQ/FAQ";
 import Services from "@/components/Services/Services";
 import Contacts from "@/components/Contacts/Contacts";
-import {useState} from "react";
 import Footer from "@/components/Footer/Footer";
 
 interface Plan {
@@ -28,7 +28,6 @@ function Home() {
 
     const handlePlanClick = (plan: Plan) => {
         setSelectedPlan(plan);
-        console.log("Selected Plan:", plan);
     };
 
     return (
@@ -37,6 +36,7 @@ function Home() {
                 <title>Olena Moshko • SMM-specialist | content creator</title>
                 <meta name="description" content="Olena Moshko • SMM-specialist | content creator"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="icon" href="/favicon.png"/>
             </Head>
             <Header/>
             <main>

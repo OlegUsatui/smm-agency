@@ -119,7 +119,7 @@ const Header = () => {
                                             className={styles.menuLink}
                                             onClick={closeMenu}
                                         >
-                                            Pricing
+                                            Plans
                                         </a>
                                     </li>
                                     <li className={styles.menuItem}>
