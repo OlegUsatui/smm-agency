@@ -6,10 +6,10 @@ const PlanCard = ({plan, handleClick}) => {
     return (
         <div className={styles.planCard}>
             <h3 className={styles.planCardTitle}>{plan.title}</h3>
-            {/*<div className={styles.planCardPrice}>*/}
-            {/*    <span className={styles.planCardPriceValue}>{plan.price}</span>*/}
-            {/*    <span className={styles.planCardPriceTerm}>{plan.period}</span>*/}
-            {/*</div>*/}
+            <div className={styles.planCardPrice}>
+                <span className={styles.planCardPriceValue}>{plan.price}</span>
+                <span className={styles.planCardPriceTerm}>{plan.period}</span>
+            </div>
             <p className={styles.planCardDescription}>
                 {plan.description}
             </p>

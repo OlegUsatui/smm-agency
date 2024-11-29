@@ -15,7 +15,7 @@ const BrandCarousel = () => {
     return (
         <section>
             <div className={containerStyles.container}>
-                <p className={styles.title}>Helping brands create quality content and drive successful promotion</p>
+                <h2 className={styles.title}>Helping brands create quality content and drive successful promotion</h2>
                 <div className={styles.logos}>
                     <div className={styles.logosSlide}>
                         {brands.map((brand, index) => (

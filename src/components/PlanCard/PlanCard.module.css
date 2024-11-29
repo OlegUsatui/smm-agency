@@ -76,7 +76,7 @@
 @media (min-width: 1024px) {
     .planCard {
         max-width: 28rem;
-        min-height: 46rem;
+        min-height: 52rem;
     }
     .planCardTitle {
         font-size: 1.8rem;
